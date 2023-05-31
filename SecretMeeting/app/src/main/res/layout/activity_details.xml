@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:weightSum="20" >
+
+    <TextView
+        android:id="@+id/MeetingDescTextView"
+        android:layout_width="match_parent"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:scrollbars="vertical" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/MeetingDateTextView"
+        android:layout_width="match_parent"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </TextView>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="13" >
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="@drawable/map_border"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingRight="5dp"
+        android:paddingLeft="5dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="2" >
+
+        <TextView
+            android:id="@+id/MeetingLonTextView"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:ignore="NestedWeights">
+        </TextView>
+
+        <TextView
+            android:id="@+id/MeetingLatTextView"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" >
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>
