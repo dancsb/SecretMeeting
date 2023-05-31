@@ -31,6 +31,15 @@ module.exports = function(app) {
     );
 
     app.get(
+        '/apk',
+        authMW(objRepo),
+        function(req,res) {
+            res.set('Content-Disposition', 'attachment; filename="SecretMeeting.apk"'); 
+            res.sendFile('SecretMeeting.apk', { root: __dirname + '/../' });
+        }
+    );
+
+    app.get(
         '/',
         function(req,res) {
             res.json({ API_version: "1.0.3" });

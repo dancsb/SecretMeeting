@@ -32,32 +32,31 @@
         android:layout_width="match_parent" >
 
         <EditText
-            android:layout_width="200dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/in_date"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentStart="true" />
+            android:layout_toStartOf="@id/btn_date"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="DATE"
             android:id="@+id/btn_date"
-            android:layout_alignBottom="@+id/in_date"
-            android:layout_toEndOf="@+id/in_date" />
+            android:layout_alignParentEnd="true" />
 
         <EditText
-            android:layout_width="200dp"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/in_time"
             android:layout_below="@+id/in_date"
-            android:layout_alignParentStart="true" />
+            android:layout_toStartOf="@id/btn_time" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TIME"
             android:id="@+id/btn_time"
+            android:layout_alignParentEnd="true"
             android:layout_below="@+id/btn_date"
             android:layout_alignStart="@+id/btn_date" />
 
